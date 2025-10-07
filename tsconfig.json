@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"jsx": "react-jsx",
+		"strict": true,
+		"moduleResolution": "bundler",
+		"allowJs": true,
+		"noEmit": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	},
+	"include": [
+		"src",
+		"App.tsx",
+		"index.js",
+		"nativewind-env.d.ts"
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"extends": "expo/tsconfig.base"
+}
