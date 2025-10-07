@@ -4,8 +4,13 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import { supabase } from "@/lib/supabase";
 import { useApp } from "@/context/AppContext";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@/types/navigation";
 
-export default function LoginScreen({ navigation }) {
+type LoginScreenProps = NativeStackScreenProps<RootStackParamList, "Login">;
+
+export default function LoginScreen(props: LoginScreenProps) {
+	const { navigation } = props;
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const { updateStateKeyWithValue } = useApp();

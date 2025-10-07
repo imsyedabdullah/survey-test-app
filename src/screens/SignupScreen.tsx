@@ -3,8 +3,13 @@ import { View, Text, Alert, TouchableOpacity } from "react-native";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import { supabase } from "@/lib/supabase";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@/types/navigation";
 
-export default function SignupScreen({ navigation }) {
+type SignupScreenProps = NativeStackScreenProps<RootStackParamList, "Signup">;
+
+export default function SignupScreen(props: SignupScreenProps) {
+	const { navigation } = props;
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 

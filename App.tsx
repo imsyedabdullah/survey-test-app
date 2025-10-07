@@ -5,8 +5,9 @@ import SignupScreen from "@/screens/SignupScreen";
 import { AppProvider } from "@/context/AppContext";
 import HomeScreen from "@/screens/HomeScreen";
 import "./global.css"
+import { RootStackParamList } from "@/types/navigation";
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
 	return (

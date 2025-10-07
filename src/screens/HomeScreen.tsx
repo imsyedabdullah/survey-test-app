@@ -4,9 +4,14 @@ import { useNavigation } from "@react-navigation/native";
 import { supabase } from "@/lib/supabase";
 import { useApp } from "@/context/AppContext";
 import { Ionicons } from "@expo/vector-icons";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@/types/navigation";
 
-export default function HomeScreen() {
-	const navigation = useNavigation();
+
+type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "Home">;
+
+export default function HomeScreen(props: HomeScreenProps) {
+	const { navigation } = props;
 	const { getStateWithKey, resetState } = useApp();
 	const user = getStateWithKey("user");
 
