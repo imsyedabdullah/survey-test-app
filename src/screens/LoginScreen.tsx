@@ -25,9 +25,9 @@ export default function LoginScreen(props: LoginScreenProps) {
 			Alert.alert("Login failed", error.message);
 		} else {
 			Alert.alert("Success", "Logged in!");
-			console.log(data);
+			// console.log(data);
 			updateStateKeyWithValue("user", data.user);
-			navigation.replace("Home");
+			navigation.replace("Main");
 		}
 	};
 
